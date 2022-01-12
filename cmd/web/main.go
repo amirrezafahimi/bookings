@@ -3,9 +3,9 @@ package main
 import (
 	"fmt"
 	"github.com/alexedwards/scs/v2"
-	"github.com/amirrezafahimi/go-course/pkg/config"
-	"github.com/amirrezafahimi/go-course/pkg/handlers"
-	"github.com/amirrezafahimi/go-course/pkg/render"
+	"github.com/amirrezafahimi/bookings/pkg/config"
+	"github.com/amirrezafahimi/bookings/pkg/handlers"
+	"github.com/amirrezafahimi/bookings/pkg/render"
 	"log"
 	"net/http"
 	"time"

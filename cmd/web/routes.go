@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/amirrezafahimi/go-course/pkg/config"
-	"github.com/amirrezafahimi/go-course/pkg/handlers"
+	"github.com/amirrezafahimi/bookings/pkg/config"
+	"github.com/amirrezafahimi/bookings/pkg/handlers"
 	"github.com/go-chi/chi"
 	"github.com/go-chi/chi/middleware"
 	"net/http"

@@ -1,9 +1,9 @@
 package handlers
 
 import (
-	"github.com/amirrezafahimi/go-course/pkg/config"
-	"github.com/amirrezafahimi/go-course/pkg/models"
-	"github.com/amirrezafahimi/go-course/pkg/render"
+	"github.com/amirrezafahimi/bookings/pkg/config"
+	"github.com/amirrezafahimi/bookings/pkg/models"
+	"github.com/amirrezafahimi/bookings/pkg/render"
 	"net/http"
 )
 

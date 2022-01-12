@@ -2,8 +2,8 @@ package render
 
 import (
 	"fmt"
-	"github.com/amirrezafahimi/go-course/pkg/config"
-	"github.com/amirrezafahimi/go-course/pkg/models"
+	"github.com/amirrezafahimi/bookings/pkg/config"
+	"github.com/amirrezafahimi/bookings/pkg/models"
 	"html/template"
 	"log"
 	"net/http"
