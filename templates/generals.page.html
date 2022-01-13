@@ -1,0 +1,54 @@
+{{- /*gotype: github.com/amirrezafahimi/bookings/pkg/models.TemplateData*/ -}}
+{{template "base" .}}
+
+{{define "content"}}
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <img src="/static/images/generals-quarters.png"
+                     class="img-fluid mx-auto d-block img-thumbnail room-image"
+                     alt="room image">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <h1 class="text-center mt-4">General's Suite</h1>
+                <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus amet asperiores blanditiis culpa cupiditate, debitis deserunt dicta distinctio explicabo fuga, hic itaque laborum, nam neque officia pariatur quas repellat voluptas?</span><span>Dignissimos ea ipsam nulla provident ratione saepe soluta, ullam voluptate! Consequatur corporis delectus ea eum fuga, iusto laborum nam nostrum quae recusandae sed sint ut. Cupiditate eum hic illum temporibus?</span><span>Accusamus asperiores blanditiis commodi cum dolorum ea eligendi est ex facilis fuga ipsa ipsum itaque quam qui quis quo rem reprehenderit repudiandae saepe similique, tempora totam ullam vel voluptas voluptates.</span><span>Adipisci aut deleniti dicta, dignissimos dolores ducimus eius facilis harum ipsum modi nam necessitatibus nemo neque numquam officia omnis quam, qui, sapiente tempore tenetur ullam unde voluptas voluptates. Est, provident.</span><span>Alias culpa, eos! Accusamus blanditiis doloribus et eum eveniet labore molestias natus, nesciunt, officia omnis quasi sed tempore voluptatibus? Atque explicabo fuga iste, itaque neque nesciunt nobis possimus quas sint.</span>
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col text-center">
+                <a id="check-availability-button" href="#" class="btn btn-success">Check Availability</a>
+            </div>
+        </div>
+    </div>
+
+{{end}}
+
+{{define "js"}}
+    <script>
+        document.getElementById("check-availability-button").addEventListener("click", function () {
+            const html = `<form action="/check-availability-button" method="post" novalidate class="needs-validation">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="mb-3">
+                                        <input required type="date" class="form-control" id="start" name="start"
+                                               placeholder="Arrival">
+                                    </div>
+                                </div>
+
+                                <div class="col">
+                                    <div class="mb-3">
+                                        <input required type="date" class="form-control" id="end" name="end"
+                                               placeholder="Departure">
+                                    </div>
+                                </div>
+                            </div>
+                        </form>`;
+            attention.custom({msg: html, title: "Choose your dates"});
+        });
+    </script>
+{{end}}
