@@ -34,7 +34,7 @@ func main() {
 	}
 
 	app.TemplateCache = tc
-	app.UseCache = false // TODO: set true in production
+	app.UseCache = app.InProduction
 
 	repo := handlers.NewRepo(&app)
 	handlers.NewHandlers(repo)

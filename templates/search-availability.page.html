@@ -6,12 +6,13 @@
         <div class="col-md-6">
             <h1 class="mt-5">Search for Availability</h1>
 
-            <form action="" method="get" novalidate class="needs-validation">
+            <form action="/search-availability" method="post" novalidate class="needs-validation">
+                <input type="hidden" name="csrf_token" value="{{.CSRFToken}}">
                 <div class="row">
                     <div class="col">
                         <div class="mb-3">
-                            <label for="start-date" class="form-label">Starting Date</label>
-                            <input required type="date" class="form-control" id="start-date" name="start-date"
+                            <label for="start" class="form-label">Starting Date</label>
+                            <input required type="date" class="form-control" id="start" name="start"
                                    aria-describedby="startDateHelp">
                             <div id="startDateHelp" class="form-text">
                                 Enter your starting the date in the form of YYYY-MM-DD
@@ -21,8 +22,8 @@
 
                     <div class="col">
                         <div class="mb-3">
-                            <label for="end-date" class="form-label">Ending Date</label>
-                            <input required type="date" class="form-control" id="end-date" name="end-date"
+                            <label for="end" class="form-label">Ending Date</label>
+                            <input required type="date" class="form-control" id="end" name="end"
                                    aria-describedby="endDateHelp">
                             <div id="endDateHelp" class="form-text">
                                 Enter your ending the date in the form of YYYY-MM-DD
