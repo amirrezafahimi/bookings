@@ -152,10 +152,10 @@
                         toast.addEventListener('mouseenter', Swal.stopTimer)
                         toast.addEventListener('mouseleave', Swal.resumeTimer)
                     }
-                })
+                });
 
                 Toast.fire({})
-            }
+            };
 
             let success = function (c) {
                 const {
@@ -171,7 +171,7 @@
                     footer: footer,
                 })
 
-            }
+            };
 
             let error = function (c) {
                 const {
@@ -187,7 +187,7 @@
                     footer: footer,
                 })
 
-            }
+            };
 
             async function custom(c) {
                 const {
@@ -217,19 +217,19 @@
                             document.getElementById('end').value
                         ]
                     }
-                })
+                });
 
                 if (result) {
                     if (result.dismiss !== Swal.DismissReason.cancel) {
                         if (result.value !== "") {
                             if (c.callback !== undefined) {
-                                c.callback(result);
+                                await c.callback(result);
                             }
                         } else {
-                            c.callback(false);
+                            await c.callback(false);
                         }
                     } else {
-                        c.callback(false);
+                        await c.callback(false);
                     }
                 }
             }
@@ -239,7 +239,7 @@
                 success: success,
                 error: error,
                 custom: custom,
-            }
+            };
         }
     </script>
 
