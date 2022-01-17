@@ -3,9 +3,9 @@ package handlers
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/amirrezafahimi/bookings/pkg/config"
-	"github.com/amirrezafahimi/bookings/pkg/models"
-	"github.com/amirrezafahimi/bookings/pkg/render"
+	"github.com/amirrezafahimi/bookings/internal/config"
+	"github.com/amirrezafahimi/bookings/internal/models"
+	"github.com/amirrezafahimi/bookings/internal/render"
 	"log"
 	"net/http"
 )

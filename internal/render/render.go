@@ -2,8 +2,8 @@ package render
 
 import (
 	"fmt"
-	"github.com/amirrezafahimi/bookings/pkg/config"
-	"github.com/amirrezafahimi/bookings/pkg/models"
+	"github.com/amirrezafahimi/bookings/internal/config"
+	"github.com/amirrezafahimi/bookings/internal/models"
 	"github.com/justinas/nosurf"
 	"html/template"
 	"log"
